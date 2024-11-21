@@ -1,4 +1,4 @@
-# README
+# My Obsidian Work Vault Template
 
 *This README is best viewed within Obsidian.  Clone down the repo and open the Vault with Obsidian*
 
