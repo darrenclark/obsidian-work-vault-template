@@ -1,0 +1,27 @@
+.task-list-item[data-task-status-type="TODO"][data-task-due^="past-"] .task-due:before {
+  background-color: #8c0000;
+  border-radius: 5px;
+  content: " OVERDUE ";
+  margin-left: 4px;
+  margin-right: 4px;
+  font-size: 0.8em;
+  vertical-align: text-top;
+  font-weight: bold;
+}
+
+.task-list-item[data-task-status-type="TODO"][data-task-due^="today"] .task-due:before {
+  background-color: #0215e0;
+  border-radius: 5px;
+  content: " TODAY ";
+  margin-left: 4px;
+  margin-right: 4px;
+  font-size: 0.8em;
+  vertical-align: text-top;
+  font-weight: bold;
+}
+
+.task-list-item[data-task-status-type="CANCELLED"] {
+  text-decoration: line-through;
+  text-decoration-style: wavy;
+  text-decoration-color: #bbb;
+}

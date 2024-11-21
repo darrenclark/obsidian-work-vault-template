@@ -1,0 +1,167 @@
+{
+  "choices": [
+    {
+      "id": "516fb711-68fd-4e69-bec5-5ff5536ba493",
+      "name": "New Meeting Notes",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/Meeting Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE}} {{name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "meetings"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "aa34817d-f818-4b5f-8c94-eaf3dc45b8a4",
+      "name": "New One-on-one Notes",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/One-on-one Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE}} {{name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "meetings"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "a7adf7ad-8ef0-4a95-8569-3c5fec51cf3a",
+      "name": "Switch to today",
+      "type": "Macro",
+      "command": false,
+      "macroId": "c410423f-f4fa-45bf-87e1-451c3abba767"
+    }
+  ],
+  "macros": [
+    {
+      "name": "Switch to today",
+      "id": "c410423f-f4fa-45bf-87e1-451c3abba767",
+      "commands": [
+        {
+          "name": "Toggle pin",
+          "type": "Obsidian",
+          "id": "31933a49-f612-42d6-b2bd-ff4b269987a1",
+          "commandId": "workspace:toggle-pin"
+        },
+        {
+          "name": "Wait",
+          "type": "Wait",
+          "id": "7b1e8033-3ae8-4ffa-8108-e5aedc61cf4e",
+          "time": 100
+        },
+        {
+          "name": "Daily notes: Open today's daily note",
+          "type": "Obsidian",
+          "id": "028c88ee-4bd9-4c90-b6e2-300a0f85665f",
+          "commandId": "daily-notes"
+        },
+        {
+          "name": "Wait",
+          "type": "Wait",
+          "id": "9d3fce9a-2bee-43c2-8b31-5b8849eb2d42",
+          "time": 100
+        },
+        {
+          "name": "Toggle pin",
+          "type": "Obsidian",
+          "id": "48e580c3-b8d6-4d51-b499-e2c25bc50183",
+          "commandId": "workspace:toggle-pin"
+        }
+      ],
+      "runOnStartup": false
+    }
+  ],
+  "inputPrompt": "single-line",
+  "devMode": false,
+  "templateFolderPath": "templates",
+  "announceUpdates": false,
+  "version": "1.8.1",
+  "disableOnlineFeatures": true,
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          }
+        ]
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true
+  }
+}

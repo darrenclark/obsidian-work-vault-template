@@ -1,0 +1,33 @@
+{
+  "showGettingStartedBanner": false,
+  "hasMigratedDailyNoteSettings": false,
+  "hasMigratedWeeklyNoteSettings": false,
+  "daily": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "weekly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "monthly": {
+    "format": "",
+    "template": "templates/Monthly Template.md",
+    "folder": "journal/monthly",
+    "enabled": true
+  },
+  "quarterly": {
+    "format": "",
+    "template": "templates/Quarterly Template.md",
+    "folder": "journal/quarterly",
+    "enabled": true
+  },
+  "yearly": {
+    "format": "",
+    "template": "",
+    "folder": "journal/yearly",
+    "enabled": true
+  }
+}
